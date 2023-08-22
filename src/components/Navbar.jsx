@@ -25,24 +25,41 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar">
-    <h1 className="navbar-brand">
-      <span className="typewriter" ref={brandRef}>
-        Turning Ideas into Digital Reality
+    <div className="side-navbar">
+      <div className="navbar d-flex flex-column p-3">
+        <h1 className="navbar-brand">
+          <span className="typewriter" ref={brandRef} style={{ whiteSpace: "pre-line" }}>
+            Turning Ideas into
+           Reality
+          </span>
+        </h1>
+
+        <div className="navbar-nav mt-4 pb-5 pt-3">
+          <NavLink className="nav-link" to={"/"}>
+            HOME
+          </NavLink>
+
+          <NavLink className="nav-link" to={"/projects"}>
+            PORTFOLIO
+          </NavLink>
+          <NavLink className="nav-link" to={"/projects"}>
+            FAMILY
+          </NavLink>
+          <NavLink className="nav-link" to="/messageForm">
+  MESSAGE
+</NavLink>
+        </div>
+        <div>
+          <h6 className="pt-5">Connect with me</h6>
+          <span className=" d-md-block">
+        <a href="https://www.linkedin.com/in/jessypiesco/"  style={{ color: "black" }}>•LinkedIn</a>
       </span>
-    </h1>
-
-    <div className="navbar-nav d-flex justify-content-center mr-3 pr=4">
-      <NavLink className="nav-link mr-3" to={"/"}>
-        HOME
-      </NavLink>
-
-      {/* <NavLink className="nav-link" to={"/projects"}>
-        PORTFOLIO
-      </NavLink> */}
+      <span className=" d-md-block">
+        <a href="https://github.com/JessyPiesco" style={{ color: "black" }} >•GitHub</a>
+      </span>
+        </div>
+      </div>
     </div>
-  </div>
-
   );
 };
 

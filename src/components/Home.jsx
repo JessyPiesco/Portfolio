@@ -3,7 +3,15 @@ import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home" >
+    <div className="home d-flex justify-content-center align-items-center pt-5 " >
+      <div>
+        <h1>Hi, I am Jessy</h1>
+
+        <h6>Software Developer</h6>
+        <h6>Mother</h6>
+        <h6>Geek</h6>
+        </div>
+
  </div>)
 };
 
