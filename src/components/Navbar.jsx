@@ -39,25 +39,26 @@ const Navbar = () => {
             HOME
           </NavLink>
 
-          <NavLink className="nav-link" to={"/projects"}>
+          <NavLink className="nav-link" to={"/portfolio"}>
             PORTFOLIO
           </NavLink>
-          <NavLink className="nav-link" to={"/projects"}>
+          <NavLink className="nav-link" to={"/family"}>
             FAMILY
           </NavLink>
-          <NavLink className="nav-link" to="/messageForm">
+          <NavLink className="nav-link" to="/message">
   MESSAGE
 </NavLink>
         </div>
-        <div>
-          <h6 className="pt-5">Connect with me</h6>
-          <span className=" d-md-block">
-        <a href="https://www.linkedin.com/in/jessypiesco/"  style={{ color: "black" }}>•LinkedIn</a>
-      </span>
-      <span className=" d-md-block">
-        <a href="https://github.com/JessyPiesco" style={{ color: "black" }} >•GitHub</a>
-      </span>
-        </div>
+        <div className="pt-5">
+  <h6>Connect with me</h6>
+  <div className="d-md-block">
+    <a href="https://www.linkedin.com/in/jessypiesco/" className="text-dark">•LinkedIn</a>
+  </div>
+  <div className="d-md-block">
+    <a href="https://github.com/JessyPiesco" className="text-dark">•GitHub</a>
+  </div>
+</div>
+
       </div>
     </div>
   );

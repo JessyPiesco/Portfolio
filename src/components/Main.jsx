@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Home } from "./";
+import { Navbar, Home, Family, Portfolio, MessageForm } from "./";
 import {Route, Routes } from "react-router-dom";
 
 const Main = () => {
@@ -10,7 +10,9 @@ const Main = () => {
         <div className="content-container">
           <Routes>
             <Route path="/" element={<Home />} />
-            {/* <Route path="/projects" element={<Projects />} /> */}
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="/family" element={<Family />} />
+            <Route path="/message" element={<MessageForm />} />
           </Routes>
         </div>
       </div>
