@@ -9,8 +9,8 @@ import ComputerGirl from "./images/computerGirl.jpeg";
 
 const Family = () => {
   return (
-    <div className="family" >
-      <div className="family pb-5 p-0">
+    <div id="family" className="family" >
+      <div className="pb-5 p-0">
               <h1 className="d-flex justify-content-center align-items-center pt-5">Family</h1>
               <div className="row" id="1stPics">
                 <div className="col-12 col-md-6">

@@ -7,6 +7,7 @@ const MessageForm = () => {
     "Send General Message",
     "Refer for a job",
     "I'd like to talk about hiring you",
+    "Other"
   ];
   const [selectedOption, setSelectedOption] = useState(options[0]);
   const [name, setName] = useState("");
@@ -72,7 +73,7 @@ const MessageForm = () => {
     <div id="messageForm" className="container-fluid">
       <div className="row justify-content-center">
         <div className="col-lg-8 col-md-10 pt-2">
-          <div id="messageBox" className="border p-4">
+          <div id="messageBox" className="messageBox border p-4">
             <h2 className="text-center">Send me a message!</h2>
             <form onSubmit={handleSubmit}>
               <div className="mb-3">
@@ -125,6 +126,7 @@ const MessageForm = () => {
                   id="inputMessage"
                   value={message}
                   onChange={handleMessageChange}
+                  style={{minHeight:"150px"}}
                 ></textarea>
               </div>
               <div className="d-flex justify-content-center mt-3">
