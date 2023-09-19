@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import sophiaandI from "./images/SophiaandI.jpeg";
-import justinAndMe from "./images/JustinandMe.jpeg";
-import ComputerGirl from "./images/computerGirl.jpeg";
+import sophia from "./images/sophiaFamily.png";
+import justin from "./images/justinFamily.png";
+import blurb from "./images/blub.png";
+
+import familyPhoto from "./images/familyPhoto.png";
 
 const Family = () => {
   const [expandSophia, setExpandSophia] = useState(false);
@@ -22,9 +24,9 @@ const Family = () => {
 
     if (expandSophia) {
       return (
-        <div>
-          <p>{text}
-          <span onClick={toggleSophia} className="read-less">
+        <div >
+          <p >{text}
+          <span onClick={toggleSophia} className="read-less"  >
             (read less)
           </span></p>
         </div>
@@ -32,9 +34,9 @@ const Family = () => {
     } else {
       const truncatedText = text.slice(0, 204); // Truncate at 405 characters
       return (
-        <div style={{marginBottom:"-150px"}}>
+        <div>
           <p>{truncatedText}...
-          <span onClick={toggleSophia} className="read-more" >
+          <span onClick={toggleSophia} className="read-more" style={{cursor:"pointer"}}>
             (read more)
           </span></p>
         </div>
@@ -50,7 +52,7 @@ const Family = () => {
       return (
         <div>
           <p>{text}
-          <span onClick={toggleJustin} className="read-less">
+          <span onClick={toggleJustin} className="read-less" >
             (read less)
           </span></p>
         </div>
@@ -71,32 +73,54 @@ const Family = () => {
   return (
     <div id="family" className="family">
       <div className="pb-5 p-0">
-        <h1 className="d-flex justify-content-center align-items-center pt-5">
-          Family
-        </h1>
+      <div className="text-center pt-0">
+  <h1>Our Family Story</h1>
+  <div className="TopImg d-flex flex-column align-items-center">
+    <img
+      src={familyPhoto}
+      alt="Jessy's family'"
+      className="img-fluid mx-auto custom-shadow"
+      style={{ height: "400px", minWidth: "300px" }}
+    />
+    <img
+      src={blurb}
+      alt="Jessy's blurb'"
+      className="Fblurb img-fluid mx-auto custom-shadow-blurb"
+      style={{ height: "400px", marginTop: "30px" }}
+    />
+  </div>
+</div>
+
         <div className="row" id="1stPics">
           <div className="col-12 col-md-6">
             <img
-              src={sophiaandI}
-              alt="Jessy with daughter"
+              src={sophia}
+              alt="Jessy's daughter'"
               className="img-fluid"
               style={{
                 height: "50%",
-                minHeight:"350px",
                 display: "block",
                 margin: "0 auto",
-                padding: "5px",
-                paddingBottom: "10px",
+                padding: "10px",
+                paddingTop:"60px",
+
+
               }}
             />
             {renderSophiaParagraph()}
           </div>
           <div className="col-12 col-md-5">
             <img
-              src={justinAndMe}
-              alt="Jessy with husband"
+              src={justin}
+              alt="Jessy's husband'"
               className="img-fluid"
-              style={{ padding: "5px", paddingBottom: "10px" }}
+              style={{
+                height: "50%",
+                display: "block",
+                margin: "0 auto",
+                padding: "10px",
+                paddingTop:"60px"
+              }}
             />
             {renderJustinParagraph()}
 

@@ -24,7 +24,7 @@
 
 .content-container {
   height: 100vh;
-  padding-top: 9rem;
+  padding-top: 6rem;
   flex: 1;
 
   /* padding-left: 260px;  */
@@ -44,6 +44,42 @@
 
 }
 
+.custom-shadow {
+  position: relative;
+  box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.custom-shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.4) 100%);
+  z-index: -1;
+}
+
+
+
+.custom-shadow-blurb {
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.7);
+}
+.home {
+
+  margin-left: 250px;
+  padding-left: 200px;
+
+}
+.homePic{
+  margin-right: -150px;
+}
+#projects{
+  display: flex;
+  margin-left: 300px;
+  max-width: calc(100vw - 260px)!important;
+}
 
 
 
@@ -67,8 +103,25 @@
   }
   #family {
     display: flex;
-    margin-left: 75px;
+    margin-left: 160px;
 
+  }
+  .home {
+    display: flex;
+    margin-left: 75px;
+    padding-left: 20%;
+
+  }
+  #projects{
+    display: flex;
+margin-left: 70px;
+
+  }
+  .TopImg{
+    margin-left: -70px;
+  }
+  .Fblurb{
+    min-width: none;
   }
 
 

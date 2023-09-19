@@ -5,23 +5,24 @@ import jessy from "./images/jessy.png";
 
 const Home = () => {
   return (
-    <div className="home d-flex justify-content-center align-items-center pt-3 " >
-      <img
-                src={jessy}
-                alt="Jessica Picture"
-                className="img-fluid rounded-circle"
-                style={{ width: "20%", height: "20%" }}
-                title="Jessy's LinkedIn"
-              />
-      <div>
+    <div className="home pt-3 d-flex flex-column flex-md-row align-items-center">
+      <div className="homePic col-12 col-md-6">
+        <img
+          src={jessy}
+          alt="Jessica Picture"
+          className="img-fluid rounded-circle"
+          style={{ width: "70%" }}
+          title="Jessy's LinkedIn"
+        />
+      </div>
+      <div className="homeWords col-12 col-md-6">
         <h1>Hi, I am Jessy</h1>
-
         <h6>Software Developer</h6>
         <h6>Mother</h6>
         <h6>Geek</h6>
-        </div>
-
- </div>)
+      </div>
+    </div>
+  );
 };
 
 export default Home;

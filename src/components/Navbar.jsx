@@ -43,7 +43,7 @@ const Navbar = () => {
             PORTFOLIO
           </NavLink>
           <NavLink className="nav-link" to={"/family"}>
-            FAMILY
+            FAMILY STORY
           </NavLink>
           <NavLink className="nav-link" to="/message">
   MESSAGE
